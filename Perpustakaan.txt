@@ -1,0 +1,48 @@
+CREATE TABLE Student(
+id_student varchar(30) NOT NULL,
+daftar_buku varchar(30) NOT NULL,
+nama varchar(30) NOT NULL,
+no_telp varchar(30) NOT NULL,
+jurusan varchar(30) NOT NULL,
+alamat varchar(30) NOT NULL,
+denda varchar(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Buku(
+id_buku varchar(30) NOT NULL,
+nama_buku varchar(30) NOT NULL,
+penulis varchar(30) NOT NULL,
+penerbit varchar(30) NOT NULL,
+id_rak varchar(30) NOT NULL,
+genre varchar(30) NOT NULL,
+status varchar(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Pinjam Buku(
+id_student varchar(30) NOT NULL,
+id_buku varchar(30) NOT NULL,
+tgl_transaksi varchar(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Rak(
+id_rak varchar(30) NOT NULL,
+nama_rak varchar(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Ruangan(
+id_ruangan varchar(30) NOT NULL,
+nama_ruangan varchar(30) NOT NULL,
+status varchar(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE Pinjam Ruangan(
+id_student varchar(30) NOT NULL,
+id_ruangan varchar(30) NOT NULL,
+tgl_pakai varchar(30) NOT NULL,
+PRIMARY KEY(id)
+);
